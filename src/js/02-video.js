@@ -13,6 +13,6 @@ const throttled = throttle(() => {
     })
 }, 1000)
 player.on("timeupdate", throttled);
-player.on("play", function () {
+player.on("loaded", function () {
     player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time")));
 });
